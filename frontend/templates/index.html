@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web OCR with TTS</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time OCR with Speech</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="imageInput" accept="image/*">
+            <button onclick="processImage()">Process Image</button>
+        </div>
+
+        <div class="results">
+            <h3>OCR Results:</h3>
+            <div id="ocrResult" contenteditable="true"></div>
+            <button onclick="speakText()">Convert to Speech</button>
+        </div>
+
+        <div class="confidence-meter">
+            <div class="confidence-bar" id="confidenceBar"></div>
+            <span id="confidenceValue">0% Confidence</span>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
