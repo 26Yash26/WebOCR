@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  webocr:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/service-account.json
+    volumes:
+      - ./service-account.json:/app/service-account.json
+      - ./frontend/static:/app/static
+      - ./frontend/templates:/app/templates
